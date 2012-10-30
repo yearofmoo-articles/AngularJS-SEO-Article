@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI}  ^/$
+RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/?(.*)$
+RewriteRule ^(.*)$ /static/%1? [NC,L]
