@@ -3,17 +3,22 @@ var App;
   App = angular.module('App', []);
 
   App.run(['$rootScope', function($rootScope) {
+    var _getTopScope = function() {
+      return angular.element(document).scope();
+    };
+
     $rootScope.ready = function() {
-      var $scope = angular.element(document).scope();
+      var $scope = _getTopScope();
       $scope.status = 'ready';
+      if(!$scope.$$phase) $scope.$apply();
     };
     $rootScope.loading = function() {
-      var $scope = angular.element(document).scope();
+      var $scope = _getTopScope();
       $scope.status = 'loading';
+      if(!$scope.$$phase) $scope.$apply();
     };
     $rootScope.$on('$routeChangeStart', function() {
-      var $scope = angular.element(document).scope();
-      $scope.loading();
+      _getTopScope().loading();
     });
   }]);
 
@@ -24,8 +29,8 @@ var App;
 
   App.controller('VideosCtrl', function($scope, $http) {
     var url = 'https://gdata.youtube.com/feeds/api/standardfeeds/top_rated?time=today&alt=json';
-    setTimeout(function() {
-      $http.get(url).success(function(data) {
+    $http.get(url).success(function(data) {
+      setTimeout(function() {
         var feed = data['feed'];
         var entries = feed['entry'];
         $scope.videos = [];
@@ -37,8 +42,8 @@ var App;
           });
         };
         $scope.ready();
-      });
-    }, 1000);
+      }, 1000);
+    });
   });
 
   App.config(['$routeProvider', '$locationProvider', function($routes, $location) {

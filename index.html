@@ -2,11 +2,30 @@
   <head>
     <title>AngularJS SEO Demo</title>
   </head>
+  <style type="text/css">
+    .status {
+      background:maroon;
+      padding:10px;
+      color:white;
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      -webkit-transition:all 1s linear;
+    }
+    .status.ready {
+      opacity:0;
+    }
+    body {
+      padding-top:50px;
+    }
+  </style>
   <body data-status="{{ status }}" class="ng-cloak">
     <nav id="main-navigation">
       <a href="/#!/home">Home</a>
       <a href="/#!/videos">Videos</a>
     </nav>
+    <div class="status" data-ng-class="status">loading...</div>
     <div data-ng-view></div>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script> 
     <script src="./application.js"></script> 
