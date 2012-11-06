@@ -1,68 +1,88 @@
 <head>
-    <title>matias</title>
-  <style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}</style></head>
+    <title>AngularJS SEO Demo</title>
+  <style type="text/css">
+    .status {
+      background:maroon;
+      padding:10px;
+      color:white;
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      -webkit-transition:all 1s linear;
+    }
+    .status.ready {
+      opacity:0;
+    }
+    body {
+      padding-top:50px;
+    }
+  </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}</style></head>
+  
   <body data-status="ready" class="">
     <nav id="main-navigation">
       <a href="/#!/home">Home</a>
       <a href="/#!/videos">Videos</a>
+      <a href="/#!/videos/slow">Slow Loading Videos</a>
     </nav>
+    <div class="status ready" data-ng-class="status">loading...</div>
     <div data-ng-view=""><div class="videos-feed ng-scope">
   <h1>Videos</h1>
   <!-- ngRepeat: video in videos --><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    Cómo cocinar como Thous - HAMBURGUESONCIO
+    Roxio Game Cap HD Pro Review + PS3 Announcement!!
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    500,000 COD POINTS! Mission To A Million #8!
+    Minecraft Mod Showcase : MiddleageMod + Pandora's Box! [DECORATE! DESTROY THE WORLD!]
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    District3 sing Every Breath You Take/Beautiful Monster Medley - Live Week 4 - The X Factor UK 2012
+    FaZe ObJay: ObJay All The Way! - Episode 9
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    Jessica Rabbit Halloween Makeover!
+    БРОШОУ - ШКОЛА ДЕГУСТАТОРОВ
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    High School Stories - First Car Accident
+    Xbox 360 Destruction- Assassin's Creed Style
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    KILLED BY KITTEH!!!
+    The Walking Dead: A Fazenda! =D #5 (EM LIVE)
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    Jahmene Douglas sings The Fugees' Killing Me Softly - Live Week 4 - The X Factor UK 2012
+    Be a Gentleman, Get the Booty
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    Akimbo Five Seven MOAB - INSANE RUSHING!
+    SHAYTARDS WRECK IT RALPH MOVIE REVIEW!
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    James Arthur sings Eurythmics' Sweet Dreams - Live Week 4 - The X Factor UK 2012
+    #BlackOps2: Emblemas de Prestiges, League Play e Zombies
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    NR. 10 - RAP PARODIE - ALLSTARS - HABIBI BRÜDER
+    First Impression - War Z Beta Gameplay - First Day
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    MW3 - Having Fun with Strangers #36 (You Must Get All The Girls!)
+    Kye Sones sings The New Radicals Always Get What You Give - Live Week 5 -The X Factor UK 2012
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    GOING FULL FORCE - Nonsensical Chivalry: Medieval Warfare w/Nova &amp; Kootra Ep.8
+    Eduardo e Mônica: Análise da Letra (Trecho da Live de Domingo).
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    BARACK OBAMA: PURE EVIL!
+    James Arthur sings No Doubt's Don't Speak - Live Week 5 - The X Factor UK 2012
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    "Занимательная механика". Новый эпизод. Скоро!
+    Minecraft Trolling: 1.4 Update, Potions, Bats, CommandBlocks (ItsJerryAndHarry)
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    Happy Wheels w/Nova Ep.198 FACECAM - THE GHOST TRAIN
+    MW3 Funny Moments! (Deluxe Sings Gangnam Style and More!)
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    Weekend - Zehntel Mille (Prod. Psaiko Dino &amp; Peet // Cuts: DJUpset)
+    AUG A3-CQC ASSAULT RIFLE!!!
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    Minecraft: Gloria 2 w/ Mark and Nick Part 4 - A Pint of Levers
+    Real Life Warcraft Fat Nerd from South Park
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    TROLLADA ÉPICA + ANÚNCIO DE LIVE!!! XD
+    Ella Henderson sings Katy Perry's Firework - Live Week 5 - The X Factor UK 2012
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    BEST COWORKER EVER
+    Super Mario Land 2: How Jon and Ego Met - PART 2 - Game Grumps
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    Made vs Macaco - PREPARE-SE @SpaceMonkeyTube
+    Black Ops 2: Prestigios  Multijugador y Zombies? - BO2 Información
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    Βαξεβάνης: Αναζητούν εμένα αντί για την αλήθεια (video)
+    БРОДВЕЙШОУ - НАЗАД В БУДУЩЕЕ
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    FaZe ZiiMeR: ZiiM ZiiMeR - Episode 32
+    WE HAVE A BABY
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    Maleficent Make-up Transformation
+    Jahmene Douglas sings Beyonce's Listen - Live Week 5 - The X Factor UK 2012
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    BABY ZOMBIE BROTHER!
+    "ERES UN GORDO" | VÍDEO REFLEXIÓN
   </div><div data-ng-repeat="video in videos" class="ng-scope ng-binding">
-    #MONKEYSTREAM 27/10/2012
+    CUDDLE H00KERS R US!?!
   </div>
 </div><span class="ng-scope">
 </span></div>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script> 
-    <script src="./application.js"></script> 
+    <script src="./js/angular.min.js"></script> 
+    <script src="./js/application.js"></script> 
   
 
 </body>
