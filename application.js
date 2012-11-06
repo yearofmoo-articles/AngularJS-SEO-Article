@@ -22,13 +22,14 @@ var App;
     });
   }]);
 
-  App.controller('IndexCtrl', function($scope, $http) {
+  App.controller('IndexCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.some_value = 'Stefan';
     $scope.ready();
-  });
+  }]);
 
-  App.controller('VideosCtrl', function($scope, $http) {
+  App.controller('VideosCtrl', ['$scope', '$http', 'slow', function($scope, $http, isSlow) {
     var url = 'https://gdata.youtube.com/feeds/api/standardfeeds/top_rated?time=today&alt=json';
+    var timeout = isSlow ? 2000 : 1;
     $http.get(url).success(function(data) {
       setTimeout(function() {
         var feed = data['feed'];
@@ -42,9 +43,9 @@ var App;
           });
         };
         $scope.ready();
-      }, 1000);
+      }, timeout);
     });
-  });
+  }]);
 
   App.config(['$routeProvider', '$locationProvider', function($routes, $location) {
 
@@ -57,7 +58,22 @@ var App;
 
     $routes.when('/videos',{
       controller : 'VideosCtrl',
-      templateUrl : '/pages/videos.html'
+      templateUrl : '/pages/videos.html',
+      resolve : {
+        slow : function() {
+          return false;
+        }
+      }
+    });
+
+    $routes.when('/videos/slow',{
+      controller : 'VideosCtrl',
+      templateUrl : '/pages/videos.html',
+      resolve : {
+        slow : function() {
+          return true;
+        }
+      }
     });
 
     $routes.otherwise({
