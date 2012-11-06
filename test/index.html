@@ -6,10 +6,10 @@
   <body data-status="{{ status }}">
     <div data-ng-view style="display:none"></div>
     <div id="mocha"></div>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script> 
+    <script src="../js/angular.min.js"></script> 
     <script src="lib/mocha/mocha.js"></script>
     <script src="lib/chai/chai.js"></script>
-    <script src="../application.js"></script> 
+    <script src="../js/application.js"></script> 
     <script>
       mocha.ui('bdd'); 
       mocha.reporter('html');
@@ -17,8 +17,7 @@
     </script>
     <script src="spec/pages_spec.js"></script>
     <script>
-      if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
-      else { mocha.run(); }
+      mocha.run();
     </script>
   </body>
 </html>
