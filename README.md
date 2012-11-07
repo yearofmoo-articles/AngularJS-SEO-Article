@@ -1,4 +1,4 @@
-AngularJS - SEO Article
+#AngularJS - SEO Article
 
 This is a helper repository which is used as demonstration code for the **AngularJS and SEO** article found on yearofmoo.com
 
