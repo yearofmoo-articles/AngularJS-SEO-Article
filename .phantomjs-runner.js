@@ -8,7 +8,7 @@ if(url.length > 0) {
         var html = page.evaluate(function () {
           var body = document.getElementsByTagName('body')[0];
           if(body.getAttribute('data-status') == 'ready') {
-            return document.getElementsByTagName('html')[0].innerHTML;
+            return document.getElementsByTagName('html')[0].outerHTML;
           }
         });
         if(html) {

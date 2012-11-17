@@ -1,20 +1,26 @@
-<head>
+<html data-ng-app="App" class="ng-scope"><head>
     <title>AngularJS SEO Demo</title>
+    <!-- include this if you are not using hashbangs -->
+    <!-- <meta name="fragment" content="!" /> -->
   <style type="text/css">
     .status {
-      background:maroon;
-      padding:10px;
       color:white;
       position:absolute;
       top:0;
       left:0;
       right:0;
-      -webkit-transition:all 1s linear;
+      -webkit-transition:all 0.5s linear;
+      padding:15px 50px 15px 70px;
+      color:black;
+      background:white url(graphics/loading.gif) no-repeat 15px center;
+      border-bottom:2px solid #ddd;
+      box-shadow:0 0 5px #999;
     }
     .status.ready {
       opacity:0;
     }
     body {
+      background:#ddd;
       padding-top:50px;
     }
   </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}</style></head>
@@ -35,4 +41,4 @@
     <script src="./js/application.js"></script> 
   
 
-</body>
+</body></html>
