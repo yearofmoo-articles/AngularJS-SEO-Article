@@ -4,7 +4,8 @@ var App;
 
   App.run(['$rootScope', function($rootScope) {
     var _getTopScope = function() {
-      return angular.element(document).scope();
+      return $rootScope;
+      //return angular.element(document).scope();
     };
 
     $rootScope.ready = function() {
@@ -23,8 +24,9 @@ var App;
   }]);
 
   App.controller('IndexCtrl', ['$scope', '$http', function($scope, $http) {
-    $scope.some_value = 'Stefan';
+    $scope.some_value = 'Val';
     $scope.ready();
+    $scope.names = ['matias','val','mark'];
   }]);
 
   App.controller('VideosCtrl', ['$scope', '$http', 'slow', function($scope, $http, isSlow) {

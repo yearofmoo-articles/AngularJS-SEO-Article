@@ -10,7 +10,7 @@ if(url.length > 0) {
           if(body.getAttribute('data-status') == 'ready') {
             return document.getElementsByTagName('html')[0].outerHTML;
           }
-        });
+        });w
         if(html) {
           clearTimeout(delay);
           console.log(html);
