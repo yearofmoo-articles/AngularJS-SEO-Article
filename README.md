@@ -11,4 +11,4 @@ http://www.yearofmoo.com/2012/11/angularjs-and-seo.html
 ## Demo
 The Application can be demoed via
 
-http://yearofmoo-articles.github.com/angularjs-seo-article
+http://yearofmoo-articles.github.com/angularjs-seo-article/
