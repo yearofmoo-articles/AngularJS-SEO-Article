@@ -30,9 +30,10 @@ var App;
   }]);
 
   App.controller('VideosCtrl', ['$scope', '$http', 'slow', function($scope, $http, isSlow) {
-    var url = 'https://gdata.youtube.com/feeds/api/standardfeeds/top_rated?time=today&alt=json';
+    var callbackToken = 'JSON_CALLBACK';
+    var url = 'https://gdata.youtube.com/feeds/api/standardfeeds/top_rated?time=today&alt=json&callback=' + callbackToken;
     var timeout = isSlow ? 2000 : 1;
-    $http.get(url).success(function(data) {
+    $http.jsonp(url).success(function(data) {
       setTimeout(function() {
         var feed = data['feed'];
         var entries = feed['entry'];
