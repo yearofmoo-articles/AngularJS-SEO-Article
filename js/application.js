@@ -71,7 +71,7 @@ var App;
 
     $routes.when('/videos/slow',{
       controller : 'VideosCtrl',
-      templateUrl : '/pages/videos.html',
+      templateUrl : './pages/videos.html',
       resolve : {
         slow : function() {
           return true;
