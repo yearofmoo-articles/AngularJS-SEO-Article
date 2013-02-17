@@ -56,12 +56,12 @@ var App;
 
     $routes.when('/home',{
       controller : 'IndexCtrl',
-      templateUrl : '/pages/index.html'
+      templateUrl : './pages/index.html'
     });
 
     $routes.when('/videos',{
       controller : 'VideosCtrl',
-      templateUrl : '/pages/videos.html',
+      templateUrl : './pages/videos.html',
       resolve : {
         slow : function() {
           return false;
